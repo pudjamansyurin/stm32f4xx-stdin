@@ -25,9 +25,9 @@ void stdin_init(stdin_t *in, UART_HandleTypeDef *uart, uint8_t *buffer, uint16_t
   stdin_flush(in);
 }
 
-void stdin_set_callback(stdin_t *in, stdin_fn callback)
+void stdin_set_callback(stdin_t *in, stdin_callback_t cb)
 {
-  in->callback = callback;
+  in->callback = cb;
 }
 
 void stdin_flush(stdin_t *in)
